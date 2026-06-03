@@ -39,9 +39,17 @@ const Navbar = ({ lang, setLang, t }) => {
   ];
 
   const goTo = (id) => {
+    const wasOpen = open;
     setOpen(false);
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    const doScroll = () =>
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (wasOpen) {
+      // Wait for the mobile menu collapse animation (~0.35s) before scrolling
+      // so the document layout shift doesn't cancel the smooth scroll.
+      window.setTimeout(doScroll, 400);
+    } else {
+      doScroll();
+    }
   };
 
   return (

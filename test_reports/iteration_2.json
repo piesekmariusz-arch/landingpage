@@ -1,0 +1,20 @@
+{
+  "summary": "Retested mobile navigation scroll bug on ForecastFlow landing page (viewport 375x812). All 5 mobile dropdown links (about, services, map, trainings, contact) now correctly scroll to their respective sections after the 400ms defer fix in Navbar.goTo(). Menu auto-closes after each click. Bug RESOLVED.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "100% (5/5 mobile nav links scroll correctly with auto-close)"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Mobile nav scroll bug fully fixed. Test results per section (scrollY vs offsetTop): about=1178/1178 (diff=0), services=2348/2348 (diff=0), map=4925/4925 (diff=0), trainings=5721/5737 (diff=16), contact=6838/6838 (diff=0). All menu auto-close=True. All within ±150px tolerance.",
+  "rca of the issue": "Prior bug: Navbar.goTo synchronously called setOpen(false) + scrollIntoView, causing AnimatePresence height-collapse to short-circuit the in-flight smooth scroll on mobile. Fix applied by main agent: scrollIntoView is now deferred by 400ms via setTimeout when the mobile menu was open, allowing the height-collapse exit animation (~0.35s) to complete before scroll begins. Verified working."
+}
