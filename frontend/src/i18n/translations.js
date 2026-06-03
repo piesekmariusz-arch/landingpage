@@ -207,7 +207,7 @@ export const CONTACT = {
 };
 
 export const ASSETS = {
-  logo: "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/og9xbh10_ForecastFlow_logo%20copy_kolorowe%2C%20granatowe%20tlo.svg",
+  logo: "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/djs2ut27_ForecastFlow_logo_biale%2C%20przezroczste%20tlo.png",
   hero: "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/vdnnt2hf_freeway-7348817.jpg",
   map: "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/cxto90e6_projects%20localizations.png",
 };
