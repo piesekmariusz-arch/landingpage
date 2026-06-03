@@ -57,11 +57,11 @@ const Navbar = ({ lang, setLang, t }) => {
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-xl bg-[#0d2745]/85 border-b border-white/5"
-          : "bg-transparent"
+          ? "backdrop-blur-xl bg-[#0d2745]/85 border-b border-white/5 h-20 lg:h-24"
+          : "bg-transparent h-24 lg:h-28"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
         <button
           data-testid="nav-logo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -71,7 +71,9 @@ const Navbar = ({ lang, setLang, t }) => {
           <img
             src={ASSETS.logo}
             alt="ForecastFlow"
-            className="h-9 lg:h-10 w-auto"
+            className={`w-auto transition-all duration-500 ${
+              scrolled ? "h-14 lg:h-16" : "h-16 lg:h-20"
+            }`}
           />
         </button>
 
@@ -182,12 +184,12 @@ const Hero = ({ t }) => {
       </div>
 
       {/* corner ticks */}
-      <div className="absolute top-24 left-6 lg:left-10 hidden md:block">
+      <div className="absolute top-32 left-6 lg:left-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
           52.2297° N / 21.0122° E
         </div>
       </div>
-      <div className="absolute top-24 right-6 lg:right-10 hidden md:block">
+      <div className="absolute top-32 right-6 lg:right-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
           EST. WARSAW · EU
         </div>
@@ -700,7 +702,7 @@ const Footer = ({ t }) => (
   >
     <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12 lg:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
       <div className="flex items-center gap-4">
-        <img src={ASSETS.logo} alt="ForecastFlow" className="h-9 w-auto" />
+        <img src={ASSETS.logo} alt="ForecastFlow" className="h-14 lg:h-16 w-auto" />
         <span
           className="hidden md:inline text-[12px] text-white/45 tracking-wider"
           style={{ fontFamily: "'IBM Plex Mono', monospace" }}
