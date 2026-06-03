@@ -1,0 +1,34 @@
+{
+  "summary": "Tested ForecastFlow bilingual static landing page end-to-end (desktop 1920 and mobile 375). All sections render, data-testids exist, language switching (PL<->EN) works with localStorage 'ff_lang' persistence, smooth-scroll on desktop nav and hero CTAs works, contact links have correct href/target, footer shows current year, and there are no console/page errors. One bug found: on mobile, tapping items in the dropdown menu does NOT scroll to the target section (scrollY stays near 0/86). Root cause: goTo() closes the menu via setOpen(false) and calls scrollIntoView in the same tick; the AnimatePresence height-collapse animation that follows shifts layout and effectively cancels/overrides the smooth scroll. Desktop nav works because the menu isn't being collapsed.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Navbar (mobile dropdown)",
+        "issue": "Clicking mobile-nav-link-* closes the dropdown but does not scroll to the target section. window.scrollY remains ~0-86 even after 3s wait. Repro on 375x812 viewport: open mobile menu -> click any mobile-nav-link-{about|services|map|trainings|contact}. Direct call to document.getElementById('services').scrollIntoView() from console correctly scrolls to y=2348, confirming the section exists; only the click-triggered scroll fails.",
+        "selector": "[data-testid='mobile-nav-link-*']",
+        "priority": "HIGH"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Fix mobile menu navigation in /app/frontend/src/pages/LandingPage.jsx -> Navbar.goTo(). Option A: defer scroll until after menu close animation, e.g. `setOpen(false); requestAnimationFrame(() => setTimeout(() => document.getElementById(id)?.scrollIntoView({behavior:'smooth', block:'start'}), 380));` (matches the 0.35s AnimatePresence exit). Option B: close the menu after initiating scroll (call scrollIntoView first, then setOpen(false) on next tick). Option C: convert mobile menu to overlay (position:absolute/fixed) so its close doesn't cause document layout shift."
+  ],
+  "critical_code_review_comments": [
+    "Navbar.goTo synchronously fires setOpen(false) and scrollIntoView; on mobile the AnimatePresence height collapse changes document height mid-scroll and effectively cancels the smooth scroll. Defer the scroll or detach the menu from document flow.",
+    "Hero CTA anchors use href='#contact'/'#services' with preventDefault + manual scrollIntoView - works but consider unifying with the same goTo helper used by the navbar for consistency.",
+    "ASSETS.hero and ASSETS.map are loaded from customer-assets CDN without width/height attributes; consider adding loading='lazy' and explicit dimensions to avoid CLS.",
+    "translations.js stat label 'Lat \u0142\u0105cznego do\u015bwiadczenia' relies on Latin Extended font subset - verified rendering OK with current Google Fonts include."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "94% (15/16 feature checks passed; 1 mobile-scroll bug)"},
+  "test_credentials": "N/A (no auth)",
+  "seed_data_creation": "None",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "All data-testids exist and language/persistence/desktop-scroll/contact-links/footer-year all pass. Only retest mobile menu scrolling after fix: viewport 375x812, open '[data-testid=mobile-menu-toggle]', click each 'mobile-nav-link-{section}', assert window.scrollY corresponds to section offsetTop. Also verify the menu auto-closes after the click (already works).",
+  "rca of the issue": "Navbar.goTo in LandingPage.jsx: `setOpen(false); el.scrollIntoView({behavior:'smooth'})`. On mobile, setOpen(false) triggers AnimatePresence exit (height auto -> 0 over 0.35s). The smooth scroll begins while the menu (and document layout) is in transition; when the menu collapses, the target's absolute Y position changes and the in-flight smooth scroll is effectively short-circuited, leaving scrollY ~ menu height (~86px). Mitigation: delay the scroll until after the menu close animation completes, OR overlay the mobile menu so it doesn't take document height."
+}

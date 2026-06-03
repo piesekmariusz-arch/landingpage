@@ -1,34 +1,32 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* ForecastFlow landing page — global tweaks */
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0d2745;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+body {
+  background-color: #0d2745;
+  color: #ffffff;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+::selection {
+  background: #27aae1;
+  color: #0d2745;
 }
 
-.App-link {
-    color: #61dafb;
+/* Custom thin scrollbar in brand palette */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+::-webkit-scrollbar-track {
+  background: #0a1e36;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d3a60;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #27aae1;
 }

@@ -4,17 +4,17 @@
 
 body {
     margin: 0;
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #0d2745;
+    color: #ffffff;
 }
 
 code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: 'IBM Plex Mono', Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
 @layer base {
