@@ -1,0 +1,112 @@
+{
+  "theme_and_archetype": {
+    "archetype": "Archetype 4: Swiss & High-Contrast (Adapted for B2B Engineering/Architectural)",
+    "theme": "Dark (Deep Navy Dominant)",
+    "mood": "Authoritative, technical, premium, infrastructure-grade",
+    "description": "The design must feel like a high-end mobility consulting firm. No SaaS fluff, no soft gradients. Use sharp lines, strict grids, and generous negative space. It should look like an interactive architectural blueprint."
+  },
+  "colors": {
+    "brand_primary": "#0d2745",
+    "brand_accent": "#27aae1",
+    "brand_neutral": "#656b80",
+    "background_base": "#0a1e36",
+    "surface_elevated": "#112c4f",
+    "border_subtle": "rgba(101, 107, 128, 0.3)",
+    "text_primary": "#ffffff",
+    "text_secondary": "#cbd5e1"
+  },
+  "typography": {
+    "fonts": {
+      "headings": "'Outfit', sans-serif",
+      "body": "'Manrope', sans-serif",
+      "technical_labels": "'IBM Plex Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-light text-white",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-medium text-white",
+      "h3": "text-xl sm:text-2xl font-medium text-white",
+      "body": "text-base leading-relaxed text-[#cbd5e1]",
+      "labels": "text-xs uppercase tracking-[0.2em] font-['IBM_Plex_Mono'] text-[#27aae1]"
+    },
+    "requirements": "MUST import Latin Extended character sets from Google Fonts to support Polish diacritics (ł, ś, ż, ć, ń, ó)."
+  },
+  "spacing_and_layout": {
+    "grid_system": "The 'Control Room' grid. Strict, dense alignment. Elements should share borders to feel like a dashboard or control panel.",
+    "container_padding": "Generous spacing within sections (py-24 or py-32).",
+    "borders": "1px solid border using border_subtle (#656b80 at 30% opacity) to create crisp, architectural section dividers."
+  },
+  "media": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/og9xbh10_ForecastFlow_logo%20copy_kolorowe%2C%20granatowe%20tlo.svg",
+      "description": "Brand Logo (Navy Background version). Best used on dark navy backgrounds."
+    },
+    "hero_background": {
+      "url": "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/vdnnt2hf_freeway-7348817.jpg",
+      "description": "Aerial freeway at golden hour. MUST overlay with bg-[#0d2745]/70 (Deep Navy at 70% opacity) or a gradient overlay so white text remains readable and the brand color dominates the vibe."
+    },
+    "project_map": {
+      "url": "https://customer-assets.emergentagent.com/job_biz-welcome-1/artifacts/cxto90e6_projects%20localizations.png",
+      "description": "EU project locations map. Branded in Navy/Cyan. Display prominently in the 'Where we operate' section."
+    }
+  },
+  "components_and_interactions": {
+    "scrolling": "Implement smooth scrolling using Lenis (if supported) or CSS scroll-behavior: smooth for the single-page anchor links.",
+    "animations": "Subtle fade-up (Framer Motion) on scroll for all sections. No chaotic bouncing. Sharp, professional easing (e.g., cubic-bezier(0.16, 1, 0.3, 1)).",
+    "language_switcher": "A crisp, technical toggle button in the navbar (PL | EN). Needs React state to drive translations across the page.",
+    "buttons": "Sharp corners (rounded-none or max rounded-sm). Hover state: background shifts to pure #27aae1 (Cyan) and text to #0d2745 (Navy). Use 1px cyan borders for secondary buttons.",
+    "testing": "MANDATORY: data-testid on all interactive elements (buttons, links, language switcher)."
+  },
+  "sections_blueprint": {
+    "1_Navbar": {
+      "layout": "Sticky top, z-50. Glassmorphism: backdrop-blur-xl bg-[#0d2745]/90 border-b border-[#656b80]/30.",
+      "elements": "Logo (left), Navigation links (center - About, Services, Map, Trainings, Contact), Language Switcher (right).",
+      "test_ids": ["nav-logo", "nav-links", "lang-switcher"]
+    },
+    "2_Hero": {
+      "layout": "min-h-[90vh] flex items-center relative overflow-hidden",
+      "content": "H1 Motto ('Planowanie zaczyna się tu' / 'Engineering starts here'), CTA Button ('Kontakt').",
+      "visuals": "hero_background image with #0d2745 duotone/multiply overlay.",
+      "test_ids": ["hero-section", "hero-cta"]
+    },
+    "3_Stats_Strip": {
+      "layout": "Grid cols-2 md:grid-cols-4 border-y border-[#656b80]/30 bg-[#0a1e36]",
+      "content": "4 Stats: '6', '35', '60+', '102,240'.",
+      "styling": "Numbers must use 'IBM Plex Mono' in text-4xl or 5xl, text-[#27aae1]. Labels in text-[#cbd5e1] text-sm.",
+      "test_ids": ["stats-strip"]
+    },
+    "4_About": {
+      "layout": "py-24 container grid md:grid-cols-2 gap-12",
+      "content": "Long-form copy explaining the consultancy.",
+      "styling": "Asymmetric layout. One column text, the other column can be a stylized technical blank space or abstract structural grid.",
+      "test_ids": ["about-section"]
+    },
+    "5_Services": {
+      "layout": "py-24 bg-[#0a1e36]",
+      "content": "6 Service Cards: Traffic Analyses, Modeling & Forecasting, Microsimulation, Traffic Surveys, Traffic Control, Advisory.",
+      "styling": "Strict 'Control Room' grid. border-collapse styling where cards share 1px borders. Hover: 1px border turns #27aae1, slight lift.",
+      "test_ids": ["services-section", "service-card-1", "service-card-2", "service-card-3", "service-card-4", "service-card-5", "service-card-6"]
+    },
+    "6_Where_We_Operate": {
+      "layout": "py-24 container flex flex-col items-center",
+      "content": "Map caption: 'Gdzie działamy / Our actions', and the project_map image.",
+      "styling": "Map should be large, full width (max-w-5xl). Use an elegant thin 1px border around the image container.",
+      "test_ids": ["map-section"]
+    },
+    "7_PTV_Trainings": {
+      "layout": "py-24 bg-[#112c4f] border-y border-[#656b80]/30",
+      "content": "'Certified PTV Trainer' label, highlighting Visum/Vissim/Viswalk.",
+      "styling": "Make the 'Certified PTV Trainer' text highly visible using a technical badge design (cyan border, mono text).",
+      "test_ids": ["ptv-section", "ptv-badge"]
+    },
+    "8_Footer": {
+      "layout": "py-16 bg-[#0a1e36]",
+      "content": "Email (kontakt@forecastflow.pl), Phone (+48 889 486 369), LinkedIn, Logo, Copyright.",
+      "styling": "Minimalist, huge footer typography for the 'Let's Talk' section. Left-aligned list of contact info.",
+      "test_ids": ["footer-section", "contact-email", "contact-phone", "contact-linkedin"]
+    }
+  },
+  "translations_state_schema": {
+    "instruction": "Main agent must define a state dictionary for EN and PL languages to toggle smoothly. Copy must handle both.",
+    "default": "pl"
+  }
+}
