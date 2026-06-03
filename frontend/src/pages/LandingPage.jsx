@@ -186,12 +186,12 @@ const Hero = ({ t }) => {
       {/* corner ticks */}
       <div className="absolute top-56 left-6 lg:left-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
-          52.2297° N / 21.0122° E
+          52°13'46.9"N 21°00'43.9"E
         </div>
       </div>
       <div className="absolute top-56 right-6 lg:right-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
-          EST. WARSAW · EU
+          EST. KRAKÓW · PL
         </div>
       </div>
 
@@ -454,7 +454,7 @@ const MapSection = ({ t }) => (
             style={{ fontFamily: "'IBM Plex Mono', monospace" }}
           >
             <span className="w-2 h-2 rounded-full bg-[#27aae1] animate-pulse" />
-            PL · UK · IE · LT · LV · EE
+            PL · UK · IE · LT · LV · EE · FI
           </div>
         </motion.div>
 
@@ -714,7 +714,7 @@ const Footer = ({ t }) => (
         className="text-[11px] uppercase tracking-[0.25em] text-white/40"
         style={{ fontFamily: "'IBM Plex Mono', monospace" }}
       >
-        © {new Date().getFullYear()} ForecastFlow · {t.footer.rights}
+        © 2025 - 2026 ForecastFlow · {t.footer.rights}
       </div>
     </div>
   </footer>

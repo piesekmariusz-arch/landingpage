@@ -12,7 +12,7 @@ export const translations = {
     hero: {
       eyebrow: "FORECASTFLOW · Transport · Modelowanie · Prognozy",
       motto: "Planowanie zaczyna się tu.",
-      sub: "Kompleksowe opracowania transportowe, modele i prognozy ruchu, mikrosymulacje oraz doradztwo — z międzynarodowym doświadczeniem i certyfikatami PTV.",
+      sub: "Kompleksowe opracowania transportowe, modele i prognozy ruchu, mikrosymulacje oraz doradztwo.",
       cta: "Skontaktuj się",
       ctaSecondary: "Zobacz zakres",
       scroll: "Przewiń",
@@ -21,11 +21,11 @@ export const translations = {
       { value: "6", label: "Krajów doświadczenia w terenie" },
       { value: "35", label: "Lat łącznego doświadczenia" },
       { value: "60+", label: "Szkoleń zrealizowanych od 2019" },
-      { value: "102,240", label: "Przebiegów random seed wyliczonych" },
+      { value: "102,240", label: "Wyliczonych przebiegów random seed" },
     ],
     about: {
       label: "01 — O nas",
-      title: "Inżynieria, która porządkuje ruch.",
+      title: "Inżynieria, która porusza.",
       body: [
         "Specjalizujemy się w kompleksowych opracowaniach transportowych — zarówno planach i projektach transportowych, prognozach ruchu i lokalnych case study z branż drogowych, w tym analizach parkingowych, oraz kolejowych, również z analizą pieszą dworców i węzłów przesiadkowych.",
         "Nasz zespół współtworzą specjaliści z doświadczeniem międzynarodowym z krajów bałtyckich, Anglii oraz Irlandii oraz szerokim portfolio realizacji lokalnych dla najważniejszych podmiotów krajowych i głównych ośrodków miejskich.",
@@ -111,7 +111,7 @@ export const translations = {
     hero: {
       eyebrow: "FORECASTFLOW · Transport · Modelling · Forecasting",
       motto: "Engineering starts here.",
-      sub: "Comprehensive transportation studies, traffic models and forecasts, microsimulation and advisory — backed by international experience and PTV certifications.",
+      sub: "Comprehensive transportation studies, traffic models and forecasts, microsimulation and advisory.",
       cta: "Get in touch",
       ctaSecondary: "View scope",
       scroll: "Scroll",
@@ -202,7 +202,7 @@ export const translations = {
 
 export const CONTACT = {
   email: "kontakt@forecastflow.pl",
-  phone: "+48 889 486 369",
+  phone: "+48 889 486 359",
   linkedin: "https://www.linkedin.com/company/forecastflowpl/",
 };
 
