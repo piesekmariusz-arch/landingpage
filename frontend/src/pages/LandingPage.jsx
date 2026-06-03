@@ -57,8 +57,8 @@ const Navbar = ({ lang, setLang, t }) => {
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-xl bg-[#0d2745]/85 border-b border-white/5 h-20 lg:h-24"
-          : "bg-transparent h-24 lg:h-28"
+          ? "backdrop-blur-xl bg-[#0d2745]/85 border-b border-white/5 h-36 lg:h-40"
+          : "bg-transparent h-44 lg:h-52"
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
@@ -72,7 +72,7 @@ const Navbar = ({ lang, setLang, t }) => {
             src={ASSETS.logo}
             alt="ForecastFlow"
             className={`w-auto transition-all duration-500 ${
-              scrolled ? "h-14 lg:h-16" : "h-16 lg:h-20"
+              scrolled ? "h-28 lg:h-32" : "h-32 lg:h-44"
             }`}
           />
         </button>
@@ -184,18 +184,18 @@ const Hero = ({ t }) => {
       </div>
 
       {/* corner ticks */}
-      <div className="absolute top-32 left-6 lg:left-10 hidden md:block">
+      <div className="absolute top-56 left-6 lg:left-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
           52.2297° N / 21.0122° E
         </div>
       </div>
-      <div className="absolute top-32 right-6 lg:right-10 hidden md:block">
+      <div className="absolute top-56 right-6 lg:right-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
           EST. WARSAW · EU
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10 pb-20 lg:pb-28 pt-32">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10 pb-20 lg:pb-28 pt-56 lg:pt-64">
         <motion.div
           initial="hidden"
           animate="show"
