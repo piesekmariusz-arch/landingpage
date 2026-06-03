@@ -211,9 +211,9 @@ const Hero = ({ t }) => {
           <motion.h1
             variants={fadeUp}
             data-testid="hero-motto"
-            className="text-white font-light tracking-[-0.02em] leading-[0.98]"
+            className="text-white font-medium tracking-[-0.02em] leading-[0.98]"
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "'Urbanist', sans-serif",
               fontSize: "clamp(2.75rem, 8.5vw, 7.5rem)",
             }}
           >
@@ -223,7 +223,7 @@ const Hero = ({ t }) => {
           <motion.p
             variants={fadeUp}
             className="mt-8 max-w-2xl text-[#cbd5e1] text-base lg:text-lg leading-relaxed"
-            style={{ fontFamily: "'Manrope', sans-serif" }}
+            style={{ fontFamily: "'Zalando Sans', sans-serif" }}
           >
             {t.hero.sub}
           </motion.p>
@@ -321,9 +321,9 @@ const About = ({ t }) => (
         >
           <SectionLabel>{t.about.label}</SectionLabel>
           <h2
-            className="mt-6 text-white font-light tracking-tight leading-[1.05]"
+            className="mt-6 text-white font-medium tracking-tight leading-[1.05]"
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "'Urbanist', sans-serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
             }}
           >
@@ -337,7 +337,7 @@ const About = ({ t }) => (
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
           className="lg:col-span-7 lg:col-start-6 space-y-6"
-          style={{ fontFamily: "'Manrope', sans-serif" }}
+          style={{ fontFamily: "'Zalando Sans', sans-serif" }}
         >
           {t.about.body.map((p, i) => (
             <p
@@ -371,9 +371,9 @@ const Services = ({ t }) => (
       >
         <SectionLabel>{t.services.label}</SectionLabel>
         <h2
-          className="mt-6 text-white font-light tracking-tight leading-[1.05]"
+          className="mt-6 text-white font-medium tracking-tight leading-[1.05]"
           style={{
-            fontFamily: "'Outfit', sans-serif",
+            fontFamily: "'Urbanist', sans-serif",
             fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
           }}
         >
@@ -400,13 +400,13 @@ const Services = ({ t }) => (
             </div>
             <h3
               className="mt-6 text-white text-xl lg:text-2xl font-medium tracking-tight leading-snug"
-              style={{ fontFamily: "'Outfit', sans-serif" }}
+              style={{ fontFamily: "'Urbanist', sans-serif" }}
             >
               {s.title}
             </h3>
             <p
               className="mt-5 text-[14.5px] text-[#cbd5e1] leading-relaxed"
-              style={{ fontFamily: "'Manrope', sans-serif" }}
+              style={{ fontFamily: "'Zalando Sans', sans-serif" }}
             >
               {s.desc}
             </p>
@@ -435,9 +435,9 @@ const MapSection = ({ t }) => (
         >
           <SectionLabel>{t.map.label}</SectionLabel>
           <h2
-            className="mt-6 text-white font-light tracking-tight leading-[1.05]"
+            className="mt-6 text-white font-medium tracking-tight leading-[1.05]"
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "'Urbanist', sans-serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
             }}
           >
@@ -445,7 +445,7 @@ const MapSection = ({ t }) => (
           </h2>
           <p
             className="mt-6 text-[#cbd5e1] text-[15px] leading-relaxed"
-            style={{ fontFamily: "'Manrope', sans-serif" }}
+            style={{ fontFamily: "'Zalando Sans', sans-serif" }}
           >
             {t.map.subtitle}
           </p>
@@ -526,9 +526,9 @@ const PTV = ({ t }) => (
           </div>
 
           <h2
-            className="mt-8 text-white font-light tracking-tight leading-[1.05]"
+            className="mt-8 text-white font-medium tracking-tight leading-[1.05]"
             style={{
-              fontFamily: "'Outfit', sans-serif",
+              fontFamily: "'Urbanist', sans-serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
             }}
           >
@@ -537,7 +537,7 @@ const PTV = ({ t }) => (
 
           <p
             className="mt-8 text-[15.5px] text-[#cbd5e1] leading-relaxed max-w-xl"
-            style={{ fontFamily: "'Manrope', sans-serif" }}
+            style={{ fontFamily: "'Zalando Sans', sans-serif" }}
           >
             {t.ptv.body}
           </p>
@@ -565,13 +565,13 @@ const PTV = ({ t }) => (
                 </div>
                 <div
                   className="text-white text-xl font-medium tracking-tight"
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
+                  style={{ fontFamily: "'Urbanist', sans-serif" }}
                 >
                   {tool.name}
                 </div>
                 <div
                   className="text-[13px] text-[#cbd5e1] mt-1"
-                  style={{ fontFamily: "'Manrope', sans-serif" }}
+                  style={{ fontFamily: "'Zalando Sans', sans-serif" }}
                 >
                   {tool.desc}
                 </div>
@@ -601,9 +601,9 @@ const Contact = ({ t }) => (
       >
         <SectionLabel>{t.contact.label}</SectionLabel>
         <h2
-          className="mt-6 text-white font-light tracking-[-0.02em] leading-[0.98]"
+          className="mt-6 text-white font-medium tracking-[-0.02em] leading-[0.98]"
           style={{
-            fontFamily: "'Outfit', sans-serif",
+            fontFamily: "'Urbanist', sans-serif",
             fontSize: "clamp(2.5rem, 7vw, 6rem)",
           }}
         >
@@ -611,7 +611,7 @@ const Contact = ({ t }) => (
         </h2>
         <p
           className="mt-6 text-[#cbd5e1] text-lg max-w-xl"
-          style={{ fontFamily: "'Manrope', sans-serif" }}
+          style={{ fontFamily: "'Zalando Sans', sans-serif" }}
         >
           {t.contact.sub}
         </p>
@@ -640,7 +640,7 @@ const Contact = ({ t }) => (
           </div>
           <div
             className="mt-5 text-white text-lg lg:text-xl group-hover:text-[#27aae1] transition-colors break-all"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
+            style={{ fontFamily: "'Urbanist', sans-serif" }}
           >
             {CONTACT.email}
           </div>
@@ -661,7 +661,7 @@ const Contact = ({ t }) => (
           </div>
           <div
             className="mt-5 text-white text-lg lg:text-xl group-hover:text-[#27aae1] transition-colors"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
+            style={{ fontFamily: "'Urbanist', sans-serif" }}
           >
             {CONTACT.phone}
           </div>
@@ -684,7 +684,7 @@ const Contact = ({ t }) => (
           </div>
           <div
             className="mt-5 flex items-center gap-2 text-white text-lg lg:text-xl group-hover:text-[#27aae1] transition-colors"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
+            style={{ fontFamily: "'Urbanist', sans-serif" }}
           >
             forecastflowpl
             <ArrowUpRight className="w-5 h-5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -746,7 +746,7 @@ export default function LandingPage() {
   const t = translations[lang];
 
   return (
-    <div className="bg-[#0d2745] text-white min-h-screen" style={{ fontFamily: "'Manrope', sans-serif" }}>
+    <div className="bg-[#0d2745] text-white min-h-screen" style={{ fontFamily: "'Zalando Sans', sans-serif" }}>
       <Navbar lang={lang} setLang={setLang} t={t} />
       <main>
         <Hero t={t} />
