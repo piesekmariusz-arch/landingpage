@@ -12,7 +12,7 @@ const fadeUp = {
 
 const SectionLabel = ({ children }) => (
   <span
-    className="inline-block text-[11px] uppercase tracking-[0.28em] font-mono text-[#27aae1]"
+    className="inline-block text-[13px] lg:text-sm uppercase tracking-[0.28em] font-mono text-[#27aae1]"
     style={{ fontFamily: "'IBM Plex Mono', monospace" }}
   >
     {children}
@@ -186,7 +186,7 @@ const Hero = ({ t }) => {
       {/* corner ticks */}
       <div className="absolute top-56 left-6 lg:left-10 hidden md:block">
         <div className="font-mono text-[10px] tracking-[0.3em] text-[#27aae1]/80" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
-          52°13'46.9"N 21°00'43.9"E
+          50°03'06.1"N 19°56'41.6"E
         </div>
       </div>
       <div className="absolute top-56 right-6 lg:right-10 hidden md:block">
@@ -308,7 +308,7 @@ const About = ({ t }) => (
   <section
     id="about"
     data-testid="about-section"
-    className="relative py-24 lg:py-36 bg-[#0d2745]"
+    className="relative scroll-mt-44 py-24 lg:py-36 bg-[#0d2745]"
   >
     <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
@@ -359,7 +359,7 @@ const Services = ({ t }) => (
   <section
     id="services"
     data-testid="services-section"
-    className="relative py-24 lg:py-36 bg-[#0a1e36] border-y border-white/8"
+    className="relative scroll-mt-44 py-24 lg:py-36 bg-[#0a1e36] border-y border-white/8"
   >
     <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
       <motion.div
@@ -422,7 +422,7 @@ const MapSection = ({ t }) => (
   <section
     id="map"
     data-testid="map-section"
-    className="relative py-24 lg:py-36 bg-[#0d2745] overflow-hidden"
+    className="relative scroll-mt-44 py-24 lg:py-36 bg-[#0d2745] overflow-hidden"
   >
     <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
@@ -494,7 +494,7 @@ const PTV = ({ t }) => (
   <section
     id="trainings"
     data-testid="ptv-section"
-    className="relative py-24 lg:py-36 bg-[#112c4f] border-y border-white/8 overflow-hidden"
+    className="relative scroll-mt-44 py-24 lg:py-36 bg-[#112c4f] border-y border-white/8 overflow-hidden"
   >
     {/* subtle grid backdrop */}
     <div
@@ -554,29 +554,26 @@ const PTV = ({ t }) => (
             <div
               key={i}
               data-testid={`ptv-tool-${i}`}
-              className="group flex items-center justify-between border border-white/10 px-6 py-6 hover:border-[#27aae1] hover:bg-[#0d2745] transition-all duration-400"
+              className="border border-white/10 px-6 py-6"
             >
-              <div>
-                <div
-                  className="text-[10px] uppercase tracking-[0.3em] text-[#27aae1] mb-2"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                >
-                  TOOL · 0{i + 1}
-                </div>
-                <div
-                  className="text-white text-xl font-medium tracking-tight"
-                  style={{ fontFamily: "'Urbanist', sans-serif" }}
-                >
-                  {tool.name}
-                </div>
-                <div
-                  className="text-[13px] text-[#cbd5e1] mt-1"
-                  style={{ fontFamily: "'Zalando Sans', sans-serif" }}
-                >
-                  {tool.desc}
-                </div>
+              <div
+                className="text-[10px] uppercase tracking-[0.3em] text-[#27aae1] mb-2"
+                style={{ fontFamily: "'IBM Plex Mono', monospace" }}
+              >
+                {`TOOL · 0${i + 1}`}
               </div>
-              <ArrowUpRight className="w-5 h-5 text-white/40 group-hover:text-[#27aae1] group-hover:rotate-0 -rotate-12 transition-all duration-400" />
+              <div
+                className="text-white text-xl font-medium tracking-tight"
+                style={{ fontFamily: "'Urbanist', sans-serif" }}
+              >
+                {tool.name}
+              </div>
+              <div
+                className="text-[14px] text-[#cbd5e1] mt-2 leading-relaxed"
+                style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+              >
+                {tool.desc}
+              </div>
             </div>
           ))}
         </motion.div>
@@ -589,7 +586,7 @@ const Contact = ({ t }) => (
   <section
     id="contact"
     data-testid="contact-section"
-    className="relative py-24 lg:py-36 bg-[#0a1e36]"
+    className="relative scroll-mt-44 py-24 lg:py-36 bg-[#0a1e36]"
   >
     <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
       <motion.div
@@ -737,10 +734,7 @@ export default function LandingPage() {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    document.title =
-      lang === "pl"
-        ? "ForecastFlow · Planowanie zaczyna się tu"
-        : "ForecastFlow · Engineering starts here";
+    document.title = "ForecastFlow";
   }, [lang]);
 
   const t = translations[lang];
