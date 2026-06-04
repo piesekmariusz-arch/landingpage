@@ -83,7 +83,7 @@ const Navbar = ({ lang, setLang, t }) => {
               key={l.id}
               data-testid={`nav-link-${l.id}`}
               onClick={() => goTo(l.id)}
-              className="text-[13px] tracking-wide text-white/75 hover:text-[#27aae1] transition-colors duration-300"
+              className="text-base lg:text-lg tracking-wide text-white/85 hover:text-[#27aae1] transition-colors duration-300"
             >
               {l.label}
             </button>
