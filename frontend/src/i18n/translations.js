@@ -28,7 +28,7 @@ export const translations = {
       title: "Inżynieria, która porusza.",
       body: [
         "Specjalizujemy się w kompleksowych opracowaniach transportowych — zarówno planach i projektach transportowych, prognozach ruchu i lokalnych case study z branż drogowych, w tym analizach parkingowych, oraz kolejowych, również z analizą pieszą dworców i węzłów przesiadkowych.",
-        "Nasz zespół współtworzą specjaliści z doświadczeniem międzynarodowym z krajów bałtyckich, Anglii oraz Irlandii oraz szerokim portfolio realizacji lokalnych dla najważniejszych podmiotów krajowych i głównych ośrodków miejskich.",
+        "Założycielem i głównym specjalistą jest Krystian Siwek - analityk transportowy z wieloletnim doświadczeniem krajowym i międzynarodowym. Zespół współtworzą specjaliści z szerokim portfolio realizacji dla najważniejszych podmiotów krajowych i głównych ośrodków miejskich, jak również jako autorzy opracowń zagranicznych.",
         "Nasz zespół aktywnie uczestniczy w organizacji warsztatów i szkoleń dla przedstawicieli branż drogowych, kolejowych, organizatorów transportu publicznego oraz biur projektowych, dzieląc się wiedzą i praktycznym doświadczeniem. Jesteśmy certyfikowanymi szkoleniowcami w zakresie wykorzystywanego na polskim rynku oprogramowania do prognoz ruchu.",
         "Dbamy o najwyższy standard opracowań korzystając z najnowszych technologii i doświadczeń rynkowych, by nasze opracowania spełniały potrzeby miast, regionów oraz inwestycji.",
       ],
@@ -50,12 +50,12 @@ export const translations = {
         {
           code: "03",
           title: "Mikrosymulacja",
-          desc: "Przygotowujemy mikrosymulacje ruchu drogowego, transportu publicznego oraz ruchu pieszego. Posiadamy doświadczenie w opiniowaniu opracowań mikrosymulacyjnych oraz współtworzeniu wytycznych dla sektora publicznego.",
+          desc: "Przygotowujemy mikrosymulacje ruchu drogowego, parkingów, transportu publicznego oraz ruchu pieszego. Posiadamy doświadczenie w opiniowaniu opracowań mikrosymulacyjnych oraz współtworzeniu wytycznych dla sektora publicznego.",
         },
         {
-          code: "04",
-          title: "Pomiary ruchu i organizacja ruchu",
-          desc: "Prowadzimy 24-godzinne pomiary ruchu drogowego. Przygotowujemy czasowe oraz stałe organizacje ruchu, posiadamy aktualny certyfikat audytora BRD.",
+         code: "04",
+          title: "Koncepcje transportowe oraz doradztwo",
+          desc: "Oferujemy kompleksowe usługi w zakresie tyczenia szlaków komunikacyjnych, przygotowania planów remarszrutyzacji linii oraz doradztwa w zakresie nowoczesnej i zrównoważonej mobilności.",
         },
         {
           code: "05",
@@ -63,16 +63,16 @@ export const translations = {
           desc: "Przygotowujemy projekty sterowania ruchem wraz z opracowaniem dokumentacji, logiki sterowania oraz weryfikacją działania sterownika w środowisku mikrosymulacyjnym. Wykonujemy analizy przepustowości ruchu drogowego.",
         },
         {
-          code: "06",
-          title: "Koncepcje transportowe oraz doradztwo",
-          desc: "Oferujemy kompleksowe usługi w zakresie tyczenia szlaków komunikacyjnych, przygotowania planów remarszrutyzacji linii oraz doradztwa w zakresie nowoczesnej i zrównoważonej mobilności.",
+           code: "06",
+          title: "Pomiary ruchu i organizacja ruchu",
+          desc: "Prowadzimy 24-godzinne pomiary ruchu drogowego. Przygotowujemy czasowe oraz stałe organizacje ruchu, posiadamy aktualny certyfikat audytora BRD.",
         },
       ],
     },
     map: {
       label: "03 — Gdzie działamy",
       title: "Gdzie działamy",
-      subtitle: "Lokalizacje historycznych projektów zespołu — Polska, Wielka Brytania, Irlandia, kraje bałtyckie.",
+      subtitle: "Realizujemy projekty na terenie całej Polski - w miastach każej wielkości, opracowania regionalne i punktowe analizy studyjne. Powiększamy też nasze doświadczenia międzynarodowe.",
       caption: "Gdzie działamy / Our actions",
     },
     ptv: {
@@ -127,7 +127,7 @@ export const translations = {
       title: "Engineering that orchestrates movement.",
       body: [
         "We specialize in comprehensive transportation studies — including both transport plans and projects, traffic forecasts, and local case studies from the road sector, including parking analyses, as well as the railway sector, including pedestrian analyses of stations and interchange nodes.",
-        "Our team is co-formed by specialists with international experience from the Baltic states, England, and Ireland, along with an extensive portfolio of local projects executed for key national entities and major urban centers.",
+        "Founded by Krystian Siwek, an experienced specialist with a strong track record of local and international projects, our team brings together experts with extensive experience delivering projects for key national organizations and major cities.",
         "Our team actively participates in organizing workshops and training courses for representatives of the road and railway sectors, public transport authorities, and design consultancies, sharing knowledge and practical experience. We are certified trainers for the traffic forecasting software utilized in the Polish market.",
         "We ensure the highest standard of studies by using the latest technologies and market practices to ensure our deliverables meet the needs of cities, regions, and investments.",
       ],
@@ -149,12 +149,12 @@ export const translations = {
         {
           code: "03",
           title: "Microsimulation",
-          desc: "We deliver high-fidelity traffic microsimulations for vehicular traffic, public transit, and pedestrian movement. Our expertise includes peer-reviewing third-party models and co-authoring technical guidelines for the public sector.",
+          desc: "We deliver high-fidelity traffic microsimulations for vehicular traffic, parking simulation, public transit, and pedestrian movement. Our expertise includes peer-reviewing third-party models and co-authoring technical guidelines for the public sector.",
         },
         {
           code: "04",
-          title: "Traffic Surveys & Management",
-          desc: "We conduct comprehensive 24-hour traffic volume counts and data collection. We design temporary and permanent traffic management plans (TMPs), backed by certified Road Safety Audit (RSA) credentials.",
+          title: "Transportation Concepts & Advisory",
+          desc: "End-to-end consulting in alignment optimization, transit network redesign (rerouting), and strategic advisory for modern, sustainable urban mobility.",
         },
         {
           code: "05",
@@ -163,15 +163,15 @@ export const translations = {
         },
         {
           code: "06",
-          title: "Transportation Concepts & Advisory",
-          desc: "End-to-end consulting in alignment optimization, transit network redesign (rerouting), and strategic advisory for modern, sustainable urban mobility.",
+          title: "Traffic Surveys & Management",
+          desc: "We conduct comprehensive 24-hour traffic volume counts and data collection. We design temporary and permanent traffic management plans (TMPs), backed by certified Road Safety Audit (RSA) credentials.",
         },
       ],
     },
     map: {
       label: "03 — Where we act",
       title: "Where we act",
-      subtitle: "Historical project locations across Poland, the United Kingdom, Ireland and the Baltic states.",
+      subtitle: "We operate across entire Poland delivering city projects, regional assessments and local studies. We have extensive international experience in specific European areas.",
       caption: "Gdzie działamy / Our actions",
     },
     ptv: {
