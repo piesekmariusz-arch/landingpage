@@ -205,10 +205,17 @@ const Hero = ({ t }) => {
           className="max-w-5xl"
         >
           <motion.div variants={fadeUp} className="mb-8">
-            <SectionLabel>{t.hero.eyebrow}</SectionLabel>
+            <motion.h1 
+              variants={fadeUp} 
+          className="mb-8"
+          >
+          <span className="inline-block text-[13px] lg:text-sm uppercase tracking-[0.28em] font-mono text-[#27aae1]">
+            {t.hero.eyebrow}
+            </span>
+          </motion.h1>
           </motion.div>
 
-          <motion.h1
+          <motion.p
             variants={fadeUp}
             data-testid="hero-motto"
             className="text-white font-medium tracking-[-0.02em] leading-[0.98]"
@@ -218,15 +225,15 @@ const Hero = ({ t }) => {
             }}
           >
             {t.hero.motto}
-          </motion.h1>
+          </motion.p>
 
-          <motion.p
+          <motion.h2
             variants={fadeUp}
             className="mt-8 max-w-2xl text-[#cbd5e1] text-base lg:text-lg leading-relaxed"
             style={{ fontFamily: "'Zalando Sans', sans-serif" }}
           >
             {t.hero.sub}
-          </motion.p>
+          </motion.h2>
 
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap items-center gap-4">
             <a
@@ -370,7 +377,7 @@ const Services = ({ t }) => (
         className="max-w-3xl mb-16 lg:mb-24"
       >
         <SectionLabel>{t.services.label}</SectionLabel>
-        <h2
+        <span
           className="mt-6 text-white font-medium tracking-tight leading-[1.05]"
           style={{
             fontFamily: "'Urbanist', sans-serif",
@@ -378,7 +385,7 @@ const Services = ({ t }) => (
           }}
         >
           {t.services.title}
-        </h2>
+        </span>
       </motion.div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 border-l border-t border-white/8">
